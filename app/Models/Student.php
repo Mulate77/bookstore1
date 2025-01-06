@@ -9,4 +9,8 @@ class Student extends Model
 {
     /** @use HasFactory<\Database\Factories\StudentFactory> */
     use HasFactory;
+    public function registration()
+    {
+        return $this->hasMany(Registration::class);
+    }
 }
